@@ -1,6 +1,6 @@
 package com.crackers.app.model;
 
-public class login 
+public class Login 
 {
 		private String name;
 		private String emailid;

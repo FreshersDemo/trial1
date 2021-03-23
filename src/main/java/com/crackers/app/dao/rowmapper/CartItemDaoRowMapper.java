@@ -13,14 +13,14 @@ public class CartItemDaoRowMapper implements RowMapper<Cart>
 	
 	public Cart mapRow(ResultSet rs, int rowNum) throws SQLException 
 	{
-		Cart Cart1 = new Cart();
-		Cart1.setCartCrackersId(rs.getInt(1));
-		Cart1.setCartEmailid(rs.getString(2));
-		Cart1.setCartCrackersName(rs.getString(3));
-		Cart1.setCartCrackersCategory(rs.getString(4));
-		Cart1.setCartCrackersPrice(rs.getDouble(5));
-		Cart1.setCartQuantity(rs.getInt(6));
-		return Cart1;
+		Cart cart1 = new Cart();
+		cart1.setCartCrackersId(rs.getInt(1));
+		cart1.setCartEmailid(rs.getString(2));
+		cart1.setCartCrackersName(rs.getString(3));
+		cart1.setCartCrackersCategory(rs.getString(4));
+		cart1.setCartCrackersPrice(rs.getDouble(5));
+		cart1.setCartQuantity(rs.getInt(6));
+		return cart1;
 	}
 }
 

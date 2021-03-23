@@ -58,11 +58,7 @@ public class Cart
 		this.cartQuantity = cartQuantity;
 	}
 
-	public Cart() 
-	{
-
-	}
-
+	
 	public String getCartEmailid() {
 		return cartEmailid;
 	}

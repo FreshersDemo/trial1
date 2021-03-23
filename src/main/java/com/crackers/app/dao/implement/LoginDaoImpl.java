@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import com.crackers.app.dao.LoginDao;
 import com.crackers.app.dao.rowmapper.LoginDaoRowMapper;
-import com.crackers.app.model.login;
+import com.crackers.app.model.Login;
 
 @Repository
 public class LoginDaoImpl implements LoginDao
@@ -25,10 +25,10 @@ public class LoginDaoImpl implements LoginDao
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
-	public List<login>findUserById(String id) 
+	public List<Login>findUserById(String id) 
 	{
 		String sql = "select name,emailid, password from users where emailid = ?";
-		List<login> log = jdbcTemplate.query(sql,rowmapper, id);
+		List<Login> log = jdbcTemplate.query(sql,rowmapper, id);
 		return log;
 	}
 		
@@ -38,7 +38,5 @@ public class LoginDaoImpl implements LoginDao
 		int result = jdbcTemplate.update(sql, name,emailid, password);
 		return result;
 	}
-
-	
 }
 

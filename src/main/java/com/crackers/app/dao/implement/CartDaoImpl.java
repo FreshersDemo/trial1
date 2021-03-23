@@ -61,6 +61,5 @@ public class CartDaoImpl implements CartDao
 	{
 		String query="delete from cart where cartemailid=?";
 		jdbcTemplate.update(query,emailid);
-		return;
 	}
 }

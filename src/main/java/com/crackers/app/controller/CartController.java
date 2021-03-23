@@ -5,8 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -18,27 +17,19 @@ import com.crackers.app.model.Cart;
 @SessionAttributes("emailid")
 public class CartController 
 {
-	
 	@Autowired
 	CartDao cartDao;
-	
-	
-	
-	@RequestMapping(value = "/AddtoCart", method = RequestMethod.GET)
+	@GetMapping(value = "/AddtoCart")
 	public String addCart(@RequestParam int id,@RequestParam int quantity, ModelMap model, RedirectAttributes redirectAttributes)
 	{
 		String val=(String) model.get("emailid");
 		
-		if(!(val==null))
+		if(val!=null)
 		{
 			int result = cartDao.save(id,quantity,val);
 			if(result==0) 
 			{
 				redirectAttributes.addFlashAttribute("addCartStatus", false);
-			}
-			else 
-			{
-				redirectAttributes.addFlashAttribute("addCartStatus", true);
 			}
 			return "redirect:/ShowMenuItemListCustomer";
 		}
@@ -49,7 +40,7 @@ public class CartController
 	}
 	
 	
-	@RequestMapping(value = "/ShowCart", method = RequestMethod.GET)
+	@GetMapping(value = "/ShowCart")
 	public String showCartPage(ModelMap model) 
 	{
 			String val=(String) model.get("emailid");
@@ -66,7 +57,7 @@ public class CartController
 	}	
 	
 	
-	@RequestMapping(value = "/RemoveCartItem", method = RequestMethod.GET)
+	@GetMapping(value = "/RemoveCartItem")
 	public String deleteCart(@RequestParam int id, ModelMap model, RedirectAttributes redirectAttributes) 
 	{
 		int result = cartDao.delete(id);
@@ -74,15 +65,11 @@ public class CartController
 		{
 			redirectAttributes.addFlashAttribute("removeCartItemStatus", false);
 		}
-		else
-		{
-			redirectAttributes.addFlashAttribute("removeCartItemStatus", true);
-		}
 		return "redirect:/ShowCart";
 	}
 
 	
-	@RequestMapping(value = "/TruncateCartItem", method = RequestMethod.GET)
+	@GetMapping(value = "/TruncateCartItem")
 	public String truncateCartPage(ModelMap model) 
 	{
 			String val=(String) model.get("emailid");

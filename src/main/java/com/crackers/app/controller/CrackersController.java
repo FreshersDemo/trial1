@@ -3,9 +3,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
@@ -19,7 +19,7 @@ public class CrackersController
 	@Autowired
 	CrackersDao crackersDao;
 
-	@RequestMapping(value = "/ShowMenuItemListCustomer", method = RequestMethod.POST)
+	@PostMapping(value = "/ShowMenuItemListCustomer")
 	public String showMenuItemsCustomer(ModelMap model,Crackers crackers,@RequestParam String category) 
 	{
 		List<Crackers> crackersItemsCustomer = crackersDao.getMenuItemsCustomer(category);
@@ -29,7 +29,7 @@ public class CrackersController
 	}
 	
 	
-	@RequestMapping(value = "/ShowMenuItemListCustomer", method = RequestMethod.GET)
+	@GetMapping(value = "/ShowMenuItemListCustomer")
 	public String showMenuItemsCustomer1(ModelMap model,@ModelAttribute("retrieve") Crackers crackers) 
 	{
 		String c=(String) model.get("category");
@@ -39,7 +39,7 @@ public class CrackersController
 	}
 	
 	
-	@RequestMapping (value="/ShowMenuItemListCustomer1",method=RequestMethod.POST)
+	@PostMapping (value="/ShowMenuItemListCustomer1")
 	public String showSortItems(ModelMap model,@RequestParam String sort,Crackers crackers)
 	{
 		if(sort.equals("asc"))

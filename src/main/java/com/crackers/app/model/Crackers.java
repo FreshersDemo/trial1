@@ -6,10 +6,6 @@ public class Crackers
 	private String crackersCategory;
 	private double crackersPrice;
 
-	public Crackers() 
-	{
-
-	}
 
 	public long getCrackersId() 
 	{

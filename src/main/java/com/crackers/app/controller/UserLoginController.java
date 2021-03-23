@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.crackers.app.dao.LoginDao;
-import com.crackers.app.model.login;
+import com.crackers.app.model.Login;
 
 
 @Controller
@@ -21,26 +21,26 @@ public class UserLoginController {
 	@Autowired
 	LoginDao loginDao;
 	
-	@RequestMapping(value ="/login", method = RequestMethod.GET)
+	@GetMapping(value ="/login")
 	public String getLogin(ModelMap model) 
 	{
 		String emailid="";
 		model.put("emailid",emailid);
 		return "Login";
 	}
-	@RequestMapping(value ="/homepage", method = RequestMethod.GET)
+	@GetMapping(value ="/homepage")
 	public String gethomepage() 
 	{
 		return "homepage";
 	}
-	@RequestMapping(value ="/homepage", method = RequestMethod.POST)
+	@PostMapping(value ="/homepage")
 	public String getRequest(@RequestParam String emailid, @RequestParam String password, ModelMap model) 
 	{
-		List<login> log = loginDao.findUserById(emailid);
+		List<Login> log = loginDao.findUserById(emailid);
 		model.put("emailid", emailid);
 		if(!(log.isEmpty()))
 		{
-			for(login temp:log)
+			for(Login temp:log)
 			{
 				if(temp.getEmailid().equals(emailid)&& temp.getPassword().equals(password)) 
 				{
@@ -63,15 +63,15 @@ public class UserLoginController {
 		return null;
 	}
 	
-	@RequestMapping(value="/register", method=RequestMethod.GET)
-	public String showSignupPage(login log)
+	@GetMapping(value="/register")
+	public String showSignupPage(Login log)
 	{
 		return "Register";
 	}
-	@RequestMapping(value ="/register", method = RequestMethod.POST)
+	@PostMapping(value ="/register")
 	public String postRequest(@RequestParam String name, @RequestParam String emailid, @RequestParam String password, ModelMap model)
 	{
-			List<login> log=loginDao.findUserById(emailid);
+			List<Login> log=loginDao.findUserById(emailid);
 			if(log.isEmpty())
 			{
 				int result =loginDao.saveSignUpDetails(name,emailid, password);
