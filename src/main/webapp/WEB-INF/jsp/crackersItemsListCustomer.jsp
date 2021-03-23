@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Customer Menu</title>
 	<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -15,18 +15,18 @@
 </head>
 
 <body>
-	<nav role="navigation" class="navbar navbar-default">
-		<nav class="navbar-brand" style="font-family:Lucida Calligraphy; font-size:33px; color:#e81f9b;">Crackers Distributor</nav> 
+	<nav role="navigation" aria-label="navigation" class="navbar navbar-default">
+		<nav class="navbar-brand" aria-label="navbar" style="font-family:Lucida Calligraphy; font-size:33px; color:#e81f9b;">Crackers Distributor</nav> 
 		<div class="navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/homepage"><i class="fa fa-home fa-2x"></i></a></li>
-				<li><a href="/ShowCart"><i class="fa fa-shopping-cart fa-2x"></i></a></li>
+				<li><a href="/homepage"><em class="fa fa-home fa-2x"></em></a></li>
+				<li><a href="/ShowCart"><em class="fa fa-shopping-cart fa-2x"></em></a></li>
 				<li> 
 					<c:if test="${empty emailid}">
-						<a href="/login"><i class="fa fa-sign-in fa-2x"></i></a>
+						<a href="/login"><em class="fa fa-sign-in fa-2x"></em></a>
     				</c:if>    	
     				<c:if test="${not empty emailid}">
-       					<a href="/login"><i class="fa fa-sign-out fa-2x"></i></a>
+       					<a href="/login"><em class="fa fa-sign-out fa-2x"></em></a>
     				</c:if>
 				</li>
 			</ul>
@@ -58,14 +58,16 @@
 	
 	<div class="container">
 			<table class="table table-hover">
+			<caption> table </caption>
+				<th scope="col">
 				<c:forEach items="${crackersItemListCustomer}" var="crackers">
 					<div class="column">
 						<div class="card">
 							<h2>${crackers.crackersName}</h2>
-							<img class="myImages" id="myImg" style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
+							<img class="myImages" id="myImg" alt="myimg"style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
 							<div id="myModal" class="modal">
   								<span class="close">&times;</span>
-  								<img class="modal-content" id="img01">
+  								<img class="modal-content" alt="img"id="img01">
   								<div id="caption"></div>
 							</div>
 							<h3> Price : Rs.${crackers.crackersPrice}</h3>
@@ -81,16 +83,16 @@
 						<br>
 					</div>
 				</c:forEach>
-				
+				</th>
 				<tbody>
 					<c:forEach items="${sort}" var="crackers">
 						<div class="column">
 							<div class="card">
 								<h2>${crackers.crackersName}</h2>
-								<img class="myImages" id="myImg" style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
+								<img class="myImages" alt="img" id="myImg" style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
 								<div id="myModal" class="modal">
   									<span class="close">&times;</span>
-  									<img class="modal-content" id="img01">
+  									<img class="modal-content"alt="img" id="img01">
   									<div id="caption"></div>
 								</div>
 								<h3> Price : Rs.${crackers.crackersPrice}</h3>

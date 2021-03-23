@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	<div class="banner">
-	   	<img style="padding:3px 2px;" src="static/images/front1.jpg" width=100%; height=600px;/>
+	   	<img style="padding:3px 2px;" src="static/images/front1.jpg" alt="front" width=100%; height=600px;/>
 	</div>
 	<div class="clearfix"> </div>  
 	<br><br><br>
@@ -174,10 +174,10 @@
 					<h3>Follow Us On</h3>
 					<div class="social-icons">
 						<ul class="social">
-							<li><a href="https://www.facebook.com"><i></i></a> </li>
-							<li><a href="https://www.twitter.com"><i class="facebook"></i></a></li>	
-							<li><a href="https://www.google.com"><i class="google"></i> </a></li>
-							<li><a href="https://www.instagram.com"><i class="linked"></i> </a></li>	
+							<li><a href="https://www.facebook.com"><em></em></a> </li>
+							<li><a href="https://www.twitter.com"><em class="facebook"></em></a></li>	
+							<li><a href="https://www.google.com"><em class="google"></em> </a></li>
+							<li><a href="https://www.instagram.com"><em class="linked"></em> </a></li>	
 						</ul>
 						<div class="clearfix"></div>
 					</div>

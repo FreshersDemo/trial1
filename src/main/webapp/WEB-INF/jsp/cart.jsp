@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Cart</title>
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -16,18 +16,18 @@
 
 </head>
 <body>
-	<nav role="navigation" class="navbar navbar-default">
-		<nav class="navbar-brand" style="font-family:Lucida Calligraphy; font-size:33px; color:#e81f9b;">Crackers Distributor</nav> 
+	<nav role="navigation" aria-label="navigation"class="navbar navbar-default">
+		<nav class="navbar-brand" aria-label="navbar" style="font-family:Lucida Calligraphy; font-size:33px; color:#e81f9b;">Crackers Distributor</nav> 
 		<div class="navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/homepage"> <i class="fa fa-home fa-2x"></i></a></li>
-				<li><a href="/ShowMenuItemListCustomer"> <i class="fa fa-arrow-circle-left fa-2x"></i></a></li>
+				<li><a href="/homepage"> <em class="fa fa-home fa-2x"></em></a></li>
+				<li><a href="/ShowMenuItemListCustomer"> <em class="fa fa-arrow-circle-left fa-2x"></em></a></li>
 				<li> 
 					<c:if test="${empty emailid}">
-						<a href="/login"><i class="fa fa-sign-in fa-2x"></i></a>
+						<a href="/login"><em class="fa fa-sign-in fa-2x"></em></a>
     				</c:if>    	
     				<c:if test="${not empty emailid}">
-       					<a href="/login"><i class="fa fa-sign-out fa-2x"></i></a>
+       					<a href="/login"><em class="fa fa-sign-out fa-2x"></em></a>
     				</c:if>
 				</li>
 			</ul>
@@ -49,17 +49,17 @@
 	
 	<div class="container">
 		<table class="table table-striped w-auto">
-			<thead>
+		<caption> table </caption>	
 				<tr>
-					<th>NAME</th>
-					<th>CATEGORY</th>
-					<th>QUANTITY</th>
-					<th>SUB TOTAL</th>
-					<th>ACTION</th>
+					<th scope="col">NAME</th>
+					<th scope="col">CATEGORY</th>
+					<th scope="col">QUANTITY</th>
+					<th scope="col">SUB TOTAL</th>
+					<th scope="col">ACTION</th>
 				</tr>
-			</thead>
+			
 
-			<tbody>
+			
 				<c:forEach items="${cartItems}" var="cartItem">
 					<tr>
 						<td>${cartItem.cartCrackersName}</td>
@@ -69,7 +69,7 @@
 						<td><a class="btn btn-danger" href="/RemoveCartItem?id=${cartItem.cartCrackersId}">Remove</a></td>	
 					</tr>
 				</c:forEach>
-			</tbody>
+			
 		</table>
 	</div>
 		

@@ -2,7 +2,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Thank You</title>
 	<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -11,16 +11,16 @@
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<nav role="navigation" class="navbar navbar-default">
-		<nav class="navbar-brand" style="font-family:Lucida Calligraphy; font-size:33px; color:#e81f9b;">Crackers Distributor</nav> 
+	<nav role="navigation"  aria-label="navigation" class="navbar navbar-default">
+		<nav class="navbar-brand"  aria-label="navbar" style="font-family:Lucida Calligraphy; font-size:33px; color:#e81f9b;">Crackers Distributor</nav> 
 		<div class="navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/homepage"> <i class="fa fa-home fa-2x"></i></a></li>
-				<li><a href="/login"><i class="fa fa-sign-out fa-2x"></i></a>
+				<li><a href="/homepage"> <em class="fa fa-home fa-2x"></em></a></li>
+				<li><a href="/login"><em class="fa fa-sign-out fa-2x"></em></a>
 			</ul>
 		</div>
 	</nav>	
 	<h2 style="color:black; text-align:center; font-family:Lucida Calligraphy; font-size:50px;">
-	<img src="static/images/ty1.png" width="550px" height="500px" style="padding-left:25px;" />Let Your Colors Burst!!!</h2>
+	<img src="static/images/ty1.png" alt="thanks" width="550px" height="500px" style="padding-left:25px;" />Let Your Colors Burst!!!</h2>
 </body>
 </html>

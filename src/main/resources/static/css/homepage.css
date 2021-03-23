@@ -226,7 +226,7 @@ ul.nav_1 li.last{
     border-color:#fff;
     color:#7e7e7e !important;
 }
-.navbar {
+.navbar1 {
     position: relative;
     min-height: 50px;
     margin-bottom: 0px;
@@ -496,8 +496,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .col-md3 {
     text-align: center;
-}
-.col-md3 {
     background: url(../images/11.jpg) no-repeat;
     min-height: 399px;
     background-size: cover;
