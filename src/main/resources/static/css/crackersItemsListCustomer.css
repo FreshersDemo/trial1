@@ -6,7 +6,7 @@
   		max-width: 320px;
   		margin: auto;
   		text-align: center;
-  		font-family:Georgia;
+  		font-family:Serif;
   		padding-top:3px;
 	}
 	.cart
@@ -122,7 +122,7 @@
         width: 105px;
         height: 30px;
         border: 1px solid #999;
-        font-family:Georgia;
+        font-family:Serif;
         font-size: 20px;
         color: #e40078;
         background-color: #E5E4E2;

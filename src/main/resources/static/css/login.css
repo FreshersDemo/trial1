@@ -12,7 +12,7 @@ input[type=submit]
         width:100px;
         height: 37px;
         border: 1px solid #999;
-        font-family:Georgia;
+        font-family:Serif;
         font-size: 23px;
         color: green;
         background-color: #E5E4E2;
@@ -24,7 +24,7 @@ input[type=submit]
   width: 100%;
   padding: 4px 23px;
   margin: 8px 0;
-  font-family:Georgia;
+  font-family:Serif;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -35,7 +35,7 @@ input[type=submit]
  {
   width: 100%;
   padding: 4px 23px;
-  font-family:Georgia;
+  font-family:Serif;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -47,7 +47,7 @@ input[type=submit]
  {
   width: 100%;
   padding: 4px 23px;
-  font-family:Georgia;
+  font-family:Serif;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;

@@ -5,7 +5,7 @@
         width: 215px;
         height: 30px;
         border: 1px solid #999;
-        font-family:Georgia;
+        font-family:Serif;
         font-size: 20px;
         color: #e40078;
         background-color: #eee;
@@ -32,7 +32,7 @@
 html,body{
 	background:#fff;
 	font-size: 100%;
-	font-family: 'Roboto-Regular';
+	font-family: 'Serif';
 }
 body a{
 	transition:0.5s all;
@@ -295,7 +295,7 @@ ul.nav-list.list-inline li {
     color: #fa03bb;
     font-size: 1.2em;
     margin: 0;
-	font-family: 'OleoScript-Regular';
+	font-family: 'Serif';
 }
 .world p {
     color: #fa03bb;
@@ -391,7 +391,7 @@ a.item_add {
 .callbacks_tabs a:after {
 	content: "\f111";
 	font-size: 0;
-	font-family: FontAwesome;
+	font-family: Serif;
 	visibility: visible;
 	
 	height: 0px;
@@ -425,7 +425,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 .content-top h1{
 	color:#010101;
 	font-size: 3em;
-	font-family: 'OleoScript-Regular';
+	font-family: 'Serif';
 	text-align: center;
 	margin: 0 0 1em;
 }
@@ -670,32 +670,32 @@ p.footer-class a:hover{
     margin-right: 1em;
 }
 /*--register--*/
-ul.social li i {
+ul.social li em {
     display: inline-block;
     background: url(../images/img-sprite.png) no-repeat -8px -64px;
     width: 47px;
     height: 47px;
     margin: 0 5px 0 0;
 }
-ul.social li i:hover {
+ul.social li em:hover {
     background-position: -8px -8px;
 }
-ul.social li i.facebook {
+ul.social li em.facebook {
     background-position: -64px -64px;
 }
-ul.social li i.facebook:hover {
+ul.social li em.facebook:hover {
     background-position: -64px -8px;
 }
-ul.social li i.linked {
+ul.social li em.linked {
     background-position: -121px -64px;
 }
-ul.social li i.linked:hover {
+ul.social li em.linked:hover {
     background-position: -121px -8px;
 }
-ul.social li i.google {
+ul.social li em.google {
     background-position: -176px -64px;
 }
-ul.social li i.google:hover {
+ul.social li em.google:hover {
     background-position: -176px -8px;
 }
 ul.social li {

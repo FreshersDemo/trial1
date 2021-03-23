@@ -32,10 +32,6 @@
 			</ul>
 		</div>
 	</nav>
-	
-	<div class="container">
-		<h2 style="text-align:center; font-color:black;font-family:Lucida Calligraphy;">${category}</h2>
-	</div>
 	<br>
 	
 	<form action="/ShowMenuItemListCustomer1"  method="post"  class="container">
@@ -57,14 +53,14 @@
 	</div>
 	
 	<div class="container">
-			<table class="table table-hover">
-			<caption> table </caption>
-				<th scope="col">
+		<table class="table table-hover">
+		<caption style="text-align:center; font-family:Lucida Calligraphy; font-size:40px;color:black;">${category}</caption>
+			<th scope="col">
 				<c:forEach items="${crackersItemListCustomer}" var="crackers">
 					<div class="column">
 						<div class="card">
 							<h2>${crackers.crackersName}</h2>
-							<img class="myImages" id="myImg" alt="myimg"style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
+							<img class="myImages" id="myImg" alt="${crackers.crackersName}"style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
 							<div id="myModal" class="modal">
   								<span class="close">&times;</span>
   								<img class="modal-content" alt="img"id="img01">
@@ -89,7 +85,7 @@
 						<div class="column">
 							<div class="card">
 								<h2>${crackers.crackersName}</h2>
-								<img class="myImages" alt="img" id="myImg" style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
+								<img class="myImages" alt="img" id="${crackers.crackersName}" style="width:100%"  src="<c:url value="/images/${crackers.crackersName}.jpg"/>">
 								<div id="myModal" class="modal">
   									<span class="close">&times;</span>
   									<img class="modal-content"alt="img" id="img01">

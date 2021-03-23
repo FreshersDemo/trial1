@@ -33,10 +33,6 @@
 			</ul>
 		</div>
 	</nav>
-	
-	<div class="container">
-		<h2 style="text-align:center; font-color:black;font-family:Lucida Calligraphy;">Cart</h2>
-	</div>
 	<br>
 		<div class="container">
 		<c:if test="${removeCartItemStatus==true}">
@@ -49,7 +45,7 @@
 	
 	<div class="container">
 		<table class="table table-striped w-auto">
-		<caption> table </caption>	
+		<caption style="text-align:center; font-family:Lucida Calligraphy; font-size:40px;color:black;">Cart</caption>
 				<tr>
 					<th scope="col">NAME</th>
 					<th scope="col">CATEGORY</th>
@@ -57,9 +53,7 @@
 					<th scope="col">SUB TOTAL</th>
 					<th scope="col">ACTION</th>
 				</tr>
-			
-
-			
+		
 				<c:forEach items="${cartItems}" var="cartItem">
 					<tr>
 						<td>${cartItem.cartCrackersName}</td>
@@ -68,13 +62,9 @@
 						<td>Rs.${cartItem.cartCrackersPrice}</td>
 						<td><a class="btn btn-danger" href="/RemoveCartItem?id=${cartItem.cartCrackersId}">Remove</a></td>	
 					</tr>
-				</c:forEach>
-			
+				</c:forEach>	
 		</table>
 	</div>
-		
-		
-		
 		<c:if test="${total!=0 }">
 			<div style="font-size:25px; text-align:center;">Total = Rs. ${total }</div><br>
 			<div style="text-align:center;"><button class="box"  id="myBtn">Checkout</button><br><br><br>
