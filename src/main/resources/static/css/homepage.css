@@ -393,7 +393,7 @@ a.item_add {
 	font-size: 0;
 	font-family: FontAwesome;
 	visibility: visible;
-	display: block;
+	
 	height: 0px;
 	width: 0px;
 	display: inline-block;
@@ -751,7 +751,7 @@ ul.social {
 }
 .info-box .info-content {
   display: block;
-  position: relative;
+ 
   padding: 0%;
   float: left;
   left: 50%;
