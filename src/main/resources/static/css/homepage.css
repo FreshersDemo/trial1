@@ -412,7 +412,7 @@ a.item_add {
 ul.callbacks_tabs.callbacks1_tabs {
 	position: absolute;
 	bottom: 14px;
-	z-index: 999;
+	z-index: 998;
 	left: 45%;
 }
 .banner-mat{
@@ -421,7 +421,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 .glyphicon {
     line-height: normal;
 }
-/*--content--*/
 .content-top h1{
 	color:#010101;
 	font-size: 3em;

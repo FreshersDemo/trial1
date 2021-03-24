@@ -42,7 +42,6 @@
   			</div>
 		</c:if>
 	</div>
-	
 	<div class="container">
 		<table class="table table-striped w-auto">
 		<caption style="text-align:center; font-family:Lucida Calligraphy; font-size:40px;color:black;">Cart</caption>
@@ -53,7 +52,6 @@
 					<th scope="col">SUB TOTAL</th>
 					<th scope="col">ACTION</th>
 				</tr>
-		
 				<c:forEach items="${cartItems}" var="cartItem">
 					<tr>
 						<td>${cartItem.cartCrackersName}</td>

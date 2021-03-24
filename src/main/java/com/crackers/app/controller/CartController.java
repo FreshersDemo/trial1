@@ -23,7 +23,6 @@ public class CartController
 	public String addCart(@RequestParam int id,@RequestParam int quantity, ModelMap model, RedirectAttributes redirectAttributes)
 	{
 		String val=(String) model.get("emailid");
-		
 		if(val!=null)
 		{
 			int result = cartDao.save(id,quantity,val);
